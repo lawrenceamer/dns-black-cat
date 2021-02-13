@@ -1,2 +1,19 @@
-# dns-cat
-Multi platform toolkit for an interactive DNS shell commands exfiltration, by using DNS-Cat you will be able to execute system commands in shell mode over DNS protocol 
+# Dns-Cat
+Multi-platform toolkit for an interactive DNS shell commands exfiltration, by using DNS-Cat, you will be able to execute system commands in shell mode over a covert channel. 
+
+### Highlights 
+
+* The agent supports Multi-platforms 
+* built-in feature with 0xsp-mongoose RED 
+* Available as win32/64 executable, Powershell script, Linux ELF.  
+* Encoded DNS Queries commands.  
+* Speed and stability. 
+* Stealth and undetectable.
+
+|   System      |   Supported   |
+| ------------- |:-------------:|
+| Windows       |     YES       | 
+| Linux         |     YES       |
+| MacOS         |     Still     | 
+| BSD           |     YES       |
+| Android       |     Still     |
