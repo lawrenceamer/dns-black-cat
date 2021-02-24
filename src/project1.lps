@@ -8,9 +8,15 @@
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
+<<<<<<< HEAD
         <TopLine Value="263"/>
         <CursorPos X="37" Y="274"/>
         <UsageCount Value="203"/>
+=======
+        <TopLine Value="199"/>
+        <CursorPos X="41" Y="217"/>
+        <UsageCount Value="116"/>
+>>>>>>> 0836aabdae2f59bc55dc8a7b073d0e36bb0dbfb5
         <Loaded Value="True"/>
       </Unit0>
     </Units>
