@@ -3,26 +3,18 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="2">
+    <Units Count="1">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="207"/>
-        <CursorPos X="56" Y="183"/>
-        <UsageCount Value="115"/>
+        <TopLine Value="263"/>
+        <CursorPos X="37" Y="274"/>
+        <UsageCount Value="203"/>
         <Loaded Value="True"/>
       </Unit0>
-      <Unit1>
-        <Filename Value="/usr/local/share/fpcsrc/3.2.0/packages/fcl-base/src/blowfish.pp"/>
-        <UnitName Value="BlowFish"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="154"/>
-        <CursorPos X="20" Y="21"/>
-        <UsageCount Value="7"/>
-      </Unit1>
     </Units>
-    <JumpHistory Count="11" HistoryIndex="10">
+    <JumpHistory Count="14" HistoryIndex="13">
       <Position1>
         <Filename Value="project1.lpr"/>
         <Caret Line="32" Column="44" TopLine="23"/>
@@ -67,6 +59,18 @@
         <Filename Value="project1.lpr"/>
         <Caret Line="176" Column="40" TopLine="165"/>
       </Position11>
+      <Position12>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="285" Column="59" TopLine="261"/>
+      </Position12>
+      <Position13>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="185" Column="34" TopLine="174"/>
+      </Position13>
+      <Position14>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="274" Column="54" TopLine="263"/>
+      </Position14>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

