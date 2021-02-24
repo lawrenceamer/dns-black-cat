@@ -3,24 +3,26 @@
   <ProjectSession>
     <Version Value="11"/>
     <BuildModes Active="Default"/>
-    <Units Count="1">
+    <Units Count="2">
       <Unit0>
         <Filename Value="project1.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-<<<<<<< HEAD
-        <TopLine Value="263"/>
-        <CursorPos X="37" Y="274"/>
+        <TopLine Value="246"/>
+        <CursorPos Y="258"/>
         <UsageCount Value="203"/>
-=======
-        <TopLine Value="199"/>
-        <CursorPos X="41" Y="217"/>
-        <UsageCount Value="116"/>
->>>>>>> 0836aabdae2f59bc55dc8a7b073d0e36bb0dbfb5
         <Loaded Value="True"/>
       </Unit0>
+      <Unit1>
+        <Filename Value="../../../../../../fpcupdeluxe/config_lazarus/onlinepackagemanager/packages/synapse40.1/dnssend.pas"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="75"/>
+        <CursorPos X="3" Y="87"/>
+        <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+      </Unit1>
     </Units>
-    <JumpHistory Count="14" HistoryIndex="13">
+    <JumpHistory Count="29" HistoryIndex="28">
       <Position1>
         <Filename Value="project1.lpr"/>
         <Caret Line="32" Column="44" TopLine="23"/>
@@ -77,6 +79,66 @@
         <Filename Value="project1.lpr"/>
         <Caret Line="274" Column="54" TopLine="263"/>
       </Position14>
+      <Position15>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="249" Column="53" TopLine="236"/>
+      </Position15>
+      <Position16>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="243" Column="66" TopLine="234"/>
+      </Position16>
+      <Position17>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="237" Column="14" TopLine="234"/>
+      </Position17>
+      <Position18>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="238" Column="9" TopLine="223"/>
+      </Position18>
+      <Position19>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="239" Column="34" TopLine="227"/>
+      </Position19>
+      <Position20>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="238" Column="7" TopLine="222"/>
+      </Position20>
+      <Position21>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="239" Column="16" TopLine="228"/>
+      </Position21>
+      <Position22>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="240" Column="19" TopLine="229"/>
+      </Position22>
+      <Position23>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="243" Column="15" TopLine="232"/>
+      </Position23>
+      <Position24>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="238" TopLine="230"/>
+      </Position24>
+      <Position25>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="128" Column="39" TopLine="115"/>
+      </Position25>
+      <Position26>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="125" Column="22" TopLine="112"/>
+      </Position26>
+      <Position27>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="116" Column="10" TopLine="104"/>
+      </Position27>
+      <Position28>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="129" Column="45" TopLine="113"/>
+      </Position28>
+      <Position29>
+        <Filename Value="project1.lpr"/>
+        <Caret Line="265" Column="5" TopLine="255"/>
+      </Position29>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
