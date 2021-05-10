@@ -1,4 +1,4 @@
-# Dns-Cat
+# DNS-Black-Cat(DBC)
 Multi-platform toolkit for an interactive DNS shell commands exfiltration, by using DNS-Cat, you will be able to execute system commands in shell mode over a covert channel. 
 [<img align="right" src="https://github.com/lawrenceamer/0xsp/blob/master/imgs/DNS-Cat.png?raw=true" height="512" width="500">]()
 
@@ -26,8 +26,10 @@ ported as the following formats
 
 |   System      |   Supported   |
 | ------------- |:-------------:|
-| Windows       |     YES       | 
+| Windows (EXE) |     YES       | 
+| Windows (PS)  |     YES       |
+| Windows (DLL) |     YES       |
 | Linux         |     YES       |
-| MacOS         |     Still     | 
-| BSD           |     YES       |
+| MacOS         |     YES       | 
+| BSD           |     Still     |
 | Android       |     Still     |
