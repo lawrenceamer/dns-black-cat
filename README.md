@@ -26,8 +26,10 @@ ported as the following formats
 
 |   System      |   Supported   |
 | ------------- |:-------------:|
-| Windows       |     YES       | 
+| Windows (EXE) |     YES       | 
+| Windows (PS)  |     YES       |
+| Windows (DLL) |     YES       |
 | Linux         |     YES       |
-| MacOS         |     Still     | 
-| BSD           |     YES       |
+| MacOS         |     YES       | 
+| BSD           |     Still     |
 | Android       |     Still     |
