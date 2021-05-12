@@ -1,9 +1,9 @@
 # DNS-Black-Cat(DBC)
-Multi-platform toolkit for an interactive DNS shell commands exfiltration, by using DNS-Cat, you will be able to execute system commands in shell mode over a covert channel. 
+Multi-platform toolkit for an interactive C2C DNS shell, by using DNS-Black-Cat, you will be able to execute system commands in shell mode over a fully encrypted covert channel. 
 [<img align="right" src="https://github.com/lawrenceamer/0xsp/blob/master/imgs/DNS-Cat.png?raw=true" height="512" width="500">]()
 
 ### Server 
-ported as a python script, which acts as DNS server with required functionalities to provide interactive shell command interface
+ported as a python script, which acts as DNS server with required functionalities to provide interactive shell command interface.
 
 ### Client 
 ported as the following formats 
@@ -12,6 +12,7 @@ ported as the following formats
 * Linux 32/64 executable (ELF)
 * Powershell Script (ps1)
 * Dynamic Link Library (DLL)
+* MacOS Darwin x86_64 
 
 ### Highlights 
 
