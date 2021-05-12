@@ -6,7 +6,7 @@ Multi-platform toolkit for an interactive C2C DNS shell, by using DNS-Black-Cat,
 ported as a python script, which acts as DNS server with required functionalities to provide interactive shell command interface.
 
 ### Client 
-ported as the following formats 
+ported as the following file formats 
 
 * Windows 32/64 executable (exe) 
 * Linux 32/64 executable (ELF)
@@ -16,10 +16,11 @@ ported as the following formats
 
 ### Highlights 
 
-* The agent supports Multi-platforms 
-* built-in feature with 0xsp-mongoose RED 
+* The agent supports multi-platforms.
+* built-in feature with 0xsp-mongoose RED. 
 * Available as win32/64 executable, Powershell script, Linux ELF.  
-* Encoded DNS Queries commands.  
+* Encrypted and encoded DNS Queries. 
+* Traffic Segmentation. 
 * Speed and stability. 
 * Stealth and undetectable.
 
