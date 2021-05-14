@@ -39,3 +39,6 @@ ported as the following file formats
 
 ### Support 
 Support the project for continuous development (ETH **0xf340c15c5e669a4ababab856e9f2bccd659d6e42**)
+
+### Wiki ? 
+https://0xsp.com/security%20research%20&%20development%20(SRD)/covert-dns-cc-for-red-teaming-ops
