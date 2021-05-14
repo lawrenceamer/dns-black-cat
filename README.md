@@ -2,6 +2,7 @@
 Multi-platform toolkit for an interactive C2C DNS shell, by using DNS-Black-Cat, you will be able to execute system commands in shell mode over a fully encrypted covert channel. 
 [<img align="right" src="https://github.com/lawrenceamer/0xsp/blob/master/imgs/DNS-Cat.png?raw=true" height="512" width="500">]()
 
+
 ### Server 
 ported as a python script, which acts as DNS server with required functionalities to provide interactive shell command interface.
 
@@ -35,3 +36,6 @@ ported as the following file formats
 | MacOS         |     YES       | 
 | BSD           |     Still     |
 | Android       |     Still     |
+
+### Support 
+Support the project for continuous development (ETH **0xf340c15c5e669a4ababab856e9f2bccd659d6e42**)
