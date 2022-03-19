@@ -35,7 +35,7 @@ def xor_crypto_de(data):
 def xor_crypto_enc(data):
     key = "0xsp.com"
     xored = ''.join(chr(ord(x)^ord(y)) for x,y in zip(data,cycle(key)))
-    return base64.encodesbytes(xored.encode('utf-8')).decode('utf-8').replace('\n', '').strip()
+    return base64.encodebytes(xored.encode('utf-8')).decode('utf-8').replace('\n', '').strip()
 
 class Exfiltrator(BaseRequestHandler, object):
     def __init__(self, *args):
